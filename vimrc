@@ -7,6 +7,8 @@ call vundle#begin()
 
 " General utility and navigation
 Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'rking/ag.vim'
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -27,7 +29,13 @@ Plugin 'tomasr/molokai'
 Plugin 'chriskempson/base16-vim'
 Plugin 'chriskempson/vim-tomorrow-theme'
 
+" Filemanip
+Plugin 'danro/rename.vim'
+
 call vundle#end()
+
+" ag binding to ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 filetype plugin indent on    " required
 
