@@ -61,7 +61,6 @@ syntax on
 " highlight ColorColumn ctermbg=235 guibg=#EBEBEB
 " let &colorcolumn=join(range(81,999),",")
 set background=dark
-colorscheme base16-mocha
 set relativenumber
 set number
 

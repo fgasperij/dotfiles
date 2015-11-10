@@ -13,21 +13,24 @@ alias be='bundle exec'
 alias ll='ls -lah'
 alias findrelated='find / -prune -ipath'
 alias bri='brium'
+alias bri\?='brium \?'
+
+# notes
+source ~/.vim_notes
 
 # shorcuts
 function brium() { 
   param=\""$@"\";
   curl -d"$@" 'https://brium.me/api/messages?access_token=4a34f4f4518c36ef18111769b96753cdff796ee186d932c0fa6c7702f7eeb55b';
 }
-chrome () {
+function chrome () {
   open -a /Applications/Google\ Chrome.app "$1"
 }
-openu () {
+function openu () {
   sudo spctl --master-disable; open "$1"; sudo spctl --master-enable
 }
-todos () {
-  NOTES_DIRECTORY=/Users/fgasperijabalera/.vim/bundle/vim-notes/misc/notes/user
-  grep -r "TODO" "$NOTES_DIRECTORY" | sed -E 's/.*\/([^/]*):/\1:/'
+function reload() {
+  source ~/.bash_profile
 }
 
 # MANAS
