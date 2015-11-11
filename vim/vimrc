@@ -11,6 +11,7 @@ filetype plugin indent on    " required
 " ctrlp
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_working_path_mode=0
 
 " Visual options
 set ruler
