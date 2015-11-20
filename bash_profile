@@ -36,16 +36,20 @@ function openu () {
 function reload() {
   source ~/.bash_profile
 }
+function speedtest() {
+  wget -O /dev/null http://de.releases.ubuntu.com/12.04.5/ubuntu-12.04.5-alternate-amd64.iso
+}
 
 # MANAS
-# Delete to disable since it only checks that the variable exists, not it's value.
+
+## Delete to disable since it only checks that the variable exists, not it's value.
 export CEPHEID_DB_PER_BRANCH=1
 
-# go
+## go
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
-# receiver
+## receiver
 testonly () {
   local TEST=$1
   make
