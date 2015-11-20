@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$PATH:/Users/fgasperijabalera/chromium/depot_tools
+export PATH=/usr/local/bin:$PATH
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
