@@ -4,9 +4,14 @@ export PATH=/usr/local/bin:$PATH
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# shell config
 export EDITOR=vim
 set -o vi
 bindkey '^R' history-incremental-search-backward
+
+# Base16 Shell
+BASE16_SHELL="$HOME/dotfiles/shell_themes/base16-tomorrow.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # alias
 alias be='bundle exec'
