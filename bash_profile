@@ -16,7 +16,6 @@ BASE16_SHELL="$HOME/dotfiles/shell_themes/base16-tomorrow.dark.sh"
 # alias
 alias be='bundle exec'
 alias ll='ls -lah'
-alias findrelated='find / -prune -ipath'
 alias bri='brium'
 alias bri\?='brium \?'
 
