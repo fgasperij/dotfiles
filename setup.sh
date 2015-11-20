@@ -21,3 +21,8 @@ find . -type d -not -name ".*" -or -not -name "*.sh" -exec rm -rf \;
 ## install 
 
 brew install wget
+
+## remove unused
+
+launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plis
+killall CalendarAgent
