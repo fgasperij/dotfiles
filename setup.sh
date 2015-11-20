@@ -15,3 +15,9 @@ ln -s dotfiles/tmux .tmux.conf
 git clone https://github.com/chriskempson/base16-shell.git ~/dotfiles/iterm_themes
 # TODO: check this work
 find . -type d -not -name ".*" -or -not -name "*.sh" -exec rm -rf \;
+
+# OS X
+
+## install 
+
+brew install wget
