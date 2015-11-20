@@ -20,7 +20,7 @@ alias bri='brium'
 alias bri\?='brium \?'
 
 # notes
-source ~/.vim_notes
+source ~/.vim_notes.sh
 
 # shorcuts
 function brium() { 
