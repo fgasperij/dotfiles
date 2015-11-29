@@ -51,6 +51,8 @@ set shiftwidth=2
 set smartindent
 set expandtab
 
+set autoread
+
 """"""""""
 " Mappings
 """"""""""
