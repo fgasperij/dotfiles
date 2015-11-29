@@ -21,11 +21,16 @@ bindkey '^R' history-incremental-search-backward
 BASE16_SHELL="$HOME/dotfiles/shell_themes/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-# alias
-alias be='bundle exec'
-alias ll='ls -lah'
+# aliases
+## brium
 alias bri='brium'
 alias bri\?='brium \?'
+## tmux
+alias ta='tmux attach -t'
+alias ts='tmux new-session -s'
+## utilities
+alias ll='ls -lah'
+alias be='bundle exec'
 
 # notes
 source ~/.vim_notes.sh
