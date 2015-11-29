@@ -33,8 +33,7 @@ Plugin 'tpope/vim-fugitive'
 " Filemanip
 Plugin 'danro/rename.vim'
 
-" Notes
-Plugin 'xolox/vim-notes'
-Plugin 'xolox/vim-misc'
+" tmux
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
