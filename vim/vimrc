@@ -88,6 +88,10 @@ vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
 " move around
 nnoremap H 0
 nnoremap L $
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 " edit
 nnoremap <leader>o o<esc>
 nnoremap <leader><S-o> <S-o><esc>
