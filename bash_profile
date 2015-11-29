@@ -1,6 +1,13 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/Library/TeX/Distributions/Programs/texbin
 
+PS1="%~ $ "
+
+# zsh
+autoload -U compinit; compinit
+zstyle ':completion:*' menu select # arrow navigation of completion options
+setopt auto_cd # directory == cd directory
+
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
