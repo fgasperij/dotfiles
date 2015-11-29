@@ -1,8 +1,0 @@
-NOTES_DIRECTORY=~/notes/
-function notes() {
-  vim "$NOTES_DIRECTORY"
-}
-
-function todos() {
-  grep -r "TODO" "$NOTES_DIRECTORY" | sed -E 's/.*\/([^/]*):/\1:/'
-}
