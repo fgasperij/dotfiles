@@ -3,10 +3,13 @@ filetype off
 
 source ~/.vim/plugins.vim
 
+" Plugins
+
 " ag binding to ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-filetype plugin indent on    " required
+" airline
+set laststatus=2
 
 " ctrlp
 let g:ctrlp_max_files=0
