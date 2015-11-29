@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/Library/TeX/Distributions/Programs/texbin
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
