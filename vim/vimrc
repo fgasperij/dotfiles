@@ -16,14 +16,20 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_working_path_mode=0
 
+" base16 
+" colors configuration options are order specific
+set t_Co=256
+let base16colorspace=256
+colorscheme base16-tomorrow
+set background=dark
+
 " Visual options
 set ruler
 syntax on
-" highlight ColorColumn ctermbg=235 guibg=#EBEBEB
-" let &colorcolumn=join(range(81,999),",")
-set background=dark
 set relativenumber
 set number
+"highlight ColorColumn ctermbg=235 guibg=#EBEBEB
+"let &colorcolumn=join(range(81,999),",")
 
 " Searching
 set hlsearch
