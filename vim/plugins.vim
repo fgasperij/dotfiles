@@ -24,12 +24,8 @@ Plugin 'burnettk/vim-angular'
 Plugin 'scrooloose/syntastic'
 Plugin 'dag/vim2hs'
 
-" Colorschemes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'tomasr/molokai'
+" colorschemes
 Plugin 'chriskempson/base16-vim'
-Plugin 'chriskempson/vim-tomorrow-theme'
 
 " git
 Plugin 'tpope/vim-fugitive'
