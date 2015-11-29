@@ -22,6 +22,7 @@ find . -type d -not -name ".*" -or -not -name "*.sh" -exec rm -rf \;
 ## install 
 
 brew install wget
+brew install reattach-to-user-namespace
 
 ## remove unused
 
