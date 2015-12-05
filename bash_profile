@@ -29,8 +29,10 @@ alias bri\?='brium \?'
 ## tmux
 alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
+alias tk='tmux kill-session -t'
 ## utilities
 alias ll='ls -lah'
+alias l='ls -lah'
 alias be='bundle exec'
 
 # notes
@@ -52,6 +54,9 @@ function reload() {
 }
 function speedtest() {
   wget -O /dev/null http://de.releases.ubuntu.com/12.04.5/ubuntu-12.04.5-alternate-amd64.iso
+}
+function tmuxs() {
+  ~/dotfiles/tmux_setups/$1.sh
 }
 
 # MANAS
