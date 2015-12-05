@@ -7,6 +7,7 @@ PS1="%~ $ "
 autoload -U compinit; compinit
 zstyle ':completion:*' menu select # arrow navigation of completion options
 setopt auto_cd # directory == cd directory
+setopt auto_pushd # populate the dir stack
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
