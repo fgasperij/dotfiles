@@ -39,13 +39,6 @@ set incsearch
 filetype on
 filetype plugin indent on
 
-" Indent options
-" turn on to insert tabs
-"set autoindent
-"set noexpandtab
-"set tabstop=4
-"set shiftwidth=4
-" turn on to insert spaces
 set tabstop=2
 set shiftwidth=2
 set smartindent
