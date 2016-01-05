@@ -3,6 +3,8 @@ cd $HOME
 # vim
 ln -s dotfiles/vim/vimrc .vimrc
 ln -s dotfiles/vim/plugins.vim .vim/plugins.vim
+rm -r .vim/ftplugin
+ln -s dotfiles/vim/ftplugin .vim/ftplugin
 
 # bash
 ln -s dotfiles/bash_profile .bash_profile
