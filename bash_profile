@@ -55,7 +55,7 @@ function reload() {
 function speedtest() {
   wget -O /dev/null http://de.releases.ubuntu.com/12.04.5/ubuntu-12.04.5-alternate-amd64.iso
 }
-function tmuxs() {
+function tst() {
   ~/dotfiles/tmux_setups/$1.sh
 }
 
