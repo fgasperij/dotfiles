@@ -63,7 +63,9 @@ function speedtest() {
   wget -O /dev/null http://de.releases.ubuntu.com/12.04.5/ubuntu-12.04.5-alternate-amd64.iso
 }
 function tst() {
-  ~/dotfiles/tmux_setups/$1.sh
+  selected_setup=$1
+  shift 1
+  ~/dotfiles/tmux_setups/$selected_setup.sh $@
 }
 function cherry-picky() {
   git log -1 -p $1 $2 | patch -p1
