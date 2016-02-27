@@ -1,7 +1,8 @@
 set nocompatible
 filetype off   
 
-source ~/.vim/plugins.vim
+let plugins_file = "~/.vim/plugins.vim"
+exec 'source '.plugins_file
 
 " Plugins
 
@@ -73,6 +74,7 @@ nnoremap <leader>c :Ag <cword><cr>
 " edit .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ep :exec 'vsplit '.plugins_file<cr>
 " quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
