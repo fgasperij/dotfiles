@@ -24,11 +24,19 @@ Plugin 'burnettk/vim-angular'
 Plugin 'scrooloose/syntastic'
 Plugin 'dag/vim2hs'
 
+" String manip
+Plugin 'tpope/vim-abolish'
+
+" Code manip
+Plugin 'tpope/vim-commentary'
+
 " colorschemes
 Plugin 'chriskempson/base16-vim'
+Plugin 'juanedi/predawn.vim'
 
 " git
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Filemanip
 Plugin 'danro/rename.vim'
