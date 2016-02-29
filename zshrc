@@ -42,9 +42,6 @@ alias l='ls -lah'
 alias be='bundle exec'
 alias ccat='pygmentize -g'
 
-# notes
-source ~/.vim_notes.sh
-
 # shorcuts
 function brium() { 
   param=\""$@"\";
