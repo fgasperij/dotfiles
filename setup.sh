@@ -4,12 +4,14 @@ cd $HOME
 
 # still haven't found a way to install brew without interaction
 brew install wget
+brew install mysql
 
 # zsh
 brew install zsh
 chsh -s $(which zsh)
 zsh
 ln -s dotfiles/zshrc .zshrc
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # tmux
 brew install tmux
