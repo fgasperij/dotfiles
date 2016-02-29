@@ -10,6 +10,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
+Plugin 'padde/jump.vim'
 
 " Automagic
 Plugin 'ervandew/supertab'

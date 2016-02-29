@@ -65,7 +65,7 @@ function speedtest() {
 function tst() {
   selected_setup=$1
   shift 1
-  ~/dotfiles/tmux_setups/$selected_setup.sh $@
+  ~/dotfiles/tmux_setups/${selected_setup}.sh $@
 }
 function cherry-picky() {
   git log -1 -p $1 $2 | patch -p1
