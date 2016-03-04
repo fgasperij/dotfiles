@@ -4,17 +4,10 @@
 	name = Fernando Gasperi Jabalera
 	email = fjabalera@manas.com.ar
 [core]
-	excludesfile = /Users/fgasperijabalera/.gitignore_global
-  editro = /usr/bin/vim
-	editor = /usr/bin/vim
+	excludesfile = /Users/fgasperi/.gitignore_global
+	editor = /usr/local/bin/vim
 	pager = less -r
 	commentchar = %
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [alias]
 	bisect-high = bisect bad
 	bisect-low = bisect good
