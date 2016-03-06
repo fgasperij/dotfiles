@@ -1,8 +1,5 @@
-# is this necessary?
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+# brew comes first
 export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:/Library/TeX/Distributions/Programs/texbin
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -25,7 +22,7 @@ bindkey -M viins '^U' clear-screen
 bindkey -M viins 'jk' vi-cmd-mode
 
 # Base16 Shell
-BASE16_SHELL="$HOME/dotfiles/iterm_themes/base16-tomorrow.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # aliases
@@ -41,6 +38,8 @@ alias ll='ls -lah'
 alias l='ls -lah'
 alias be='bundle exec'
 alias ccat='pygmentize -g'
+## shortcut
+alias todos='vim ~/notes/todo_note.md'
 
 # shorcuts
 function brium() { 
@@ -95,3 +94,4 @@ testonly () {
 
 # autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+export PATH="/usr/local/sbin:$PATH"
