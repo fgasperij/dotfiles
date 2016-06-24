@@ -1,17 +1,21 @@
 # brew comes first
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# prompt
-PS1="%~ $ "
+# nvm
+export NVM_DIR="$HOME/.nvm"
+# android
+export ANDROID_HOME=/usr/local/opt/android-sdk
+# emacs
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
 
 # zsh
-autoload -U compinit; compinit
-zstyle ':completion:*' menu select # arrow navigation of completion options
-setopt auto_cd # directory == cd directory
-setopt auto_pushd # populate the dir stack
+# autoload -U compinit; compinit
+# zstyle ':completion:*' menu select # arrow navigation of completion options
+# setopt auto_cd # directory == cd directory
+# setopt auto_pushd # populate the dir stack
 
 # command line editing
 export EDITOR=vim
@@ -40,10 +44,13 @@ alias be='bundle exec'
 alias ccat='pygmentize -g'
 ## shortcut
 alias todos='vim ~/notes/todo_note.md'
+alias reload!='source ~/.zshrc'
+alias config='vim ~/.zshrc.pre-oh-my-zsh'
+alias topcoder='open /Users/Downloads/apps/ContestAppletProd.jnlp'
+alias poirot_tunnel='ssh poirot-stg -L 9200:172.17.0.5:9200'
 
 # shorcuts
 function brium() { 
-  param=\""$@"\";
   curl -d"$@" 'https://brium.me/api/messages?access_token=4a34f4f4518c36ef18111769b96753cdff796ee186d932c0fa6c7702f7eeb55b';
 }
 function chrome () {
@@ -61,7 +68,7 @@ function speedtest() {
 function tst() {
   selected_setup=$1
   shift 1
-  ~/dotfiles/tmux_setups/${selected_setup}.sh $@
+  ~/dotfiles/tmux/tmux_setups/${selected_setup}.sh $@
 }
 function cherry-picky() {
   git log -1 -p $1 $2 | patch -p1
@@ -95,3 +102,16 @@ testonly () {
 # autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 export PATH="/usr/local/sbin:$PATH"
+
+# connect to the university
+# function conn_university() {
+#   ssh -L 7070:localhost:7070 fjabalera@milagro.dc.uba.ar
+#   ssh -D 7070 fjabalera@10.2.4.7
+# }
+# Despues en tu browser le configuras manualmente
+# Servidor SOCKS: localhost puerto: 7070
+
+# De esta forma la conexion de tu browser sale por la facu y ves las paginas de los papers con el acceso de Ministerio como si estuvieses en la facu.
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

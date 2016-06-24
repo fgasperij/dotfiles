@@ -24,6 +24,10 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'burnettk/vim-angular'
 Plugin 'scrooloose/syntastic'
 Plugin 'dag/vim2hs'
+Plugin 'sukima/xmledit'
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " String manip
 Plugin 'tpope/vim-abolish'
