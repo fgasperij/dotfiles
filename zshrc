@@ -6,10 +6,8 @@ export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # nvm
 export NVM_DIR="$HOME/.nvm"
-# android
-export ANDROID_HOME=/usr/local/opt/android-sdk
 # emacs
-alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
+alias emacs="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs"
 
 # zsh
 # autoload -U compinit; compinit
@@ -18,7 +16,7 @@ alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
 # setopt auto_pushd # populate the dir stack
 
 # command line editing
-export EDITOR=vim
+export EDITOR="vim"
 bindkey -v # vi emulation mode
 bindkey '^R' history-incremental-search-backward
 bindkey -M vicmd '^U' clear-screen
@@ -47,9 +45,13 @@ alias todos='vim ~/notes/todo_note.md'
 alias reload!='source ~/.zshrc'
 alias config='vim ~/.zshrc.pre-oh-my-zsh'
 alias topcoder='open /Users/Downloads/apps/ContestAppletProd.jnlp'
-alias poirot_tunnel='ssh poirot-stg -L 9200:172.17.0.5:9200'
 
 # shorcuts
+#
+function networkpass() {
+  security find-generic-password -D "AirPort network password" -a $1 -gw
+}
+
 function brium() { 
   curl -d"$@" 'https://brium.me/api/messages?access_token=4a34f4f4518c36ef18111769b96753cdff796ee186d932c0fa6c7702f7eeb55b';
 }
@@ -58,9 +60,6 @@ function chrome () {
 }
 function openu () {
   sudo spctl --master-disable; open "$1"; sudo spctl --master-enable
-}
-function reload() {
-  source ~/.bash_profile
 }
 function speedtest() {
   wget -O /dev/null http://de.releases.ubuntu.com/12.04.5/ubuntu-12.04.5-alternate-amd64.iso

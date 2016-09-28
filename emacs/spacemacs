@@ -34,6 +34,8 @@ values."
      markdown
      org
 
+     themes-megapack
+
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -46,6 +48,8 @@ values."
      c-c++
      emacs-lisp
      python
+     elixir
+     react
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -110,6 +114,8 @@ values."
                          spacemacs-light
                          solarized-light
                          solarized-dark
+                         sanityinc-solarized-dark
+                         sanityinc-solarized-light
                          leuven
                          monokai
                          zenburn)
@@ -262,7 +268,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; Better better defaults
   ;;; fix for spanish accents on US-keyboads in OSX
-  (setq-default mac-right-option-modifier nil)
+  (setq-default mac-option-modifier nil)
 
   ;; scroll one line at a time (less "jumpy" than defaults)
   (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -280,6 +286,8 @@ you should place your code here."
 
   ;; Clojure
   (setq clojure-enable-fancify-symbols t)
+
+  (setq-default dospacemacs-default-theme 'solarized-dark)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -4,4 +4,8 @@
 .DS_Store
 .agignore
 
+recentf
 
+fer_toolkit/
+
+.projectile
