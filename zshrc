@@ -1,6 +1,8 @@
 # brew comes first
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+# tldr
+export PATH=~/bin:$PATH
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -36,22 +38,20 @@ alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
 alias tk='tmux kill-session -t'
 ## utilities
-alias ll='ls -lah'
-alias l='ls -lah'
+#alias ll='ls -lah'
+#alias l='ls -lah'
 alias be='bundle exec'
 alias ccat='pygmentize -g'
 ## shortcut
-alias todos='vim ~/notes/todo_note.md'
 alias reload!='source ~/.zshrc'
 alias config='vim ~/.zshrc.pre-oh-my-zsh'
 alias topcoder='open /Users/Downloads/apps/ContestAppletProd.jnlp'
 
 # shorcuts
-#
+
 function networkpass() {
   security find-generic-password -D "AirPort network password" -a $1 -gw
 }
-
 function brium() { 
   curl -d"$@" 'https://brium.me/api/messages?access_token=4a34f4f4518c36ef18111769b96753cdff796ee186d932c0fa6c7702f7eeb55b';
 }
@@ -76,28 +76,6 @@ function gi() {
   curl -L -s https://www.gitignore.io/api/"$@" ;
 }
 
-# MANAS
-
-## Delete to disable since it only checks that the variable exists, not it's value.
-export CEPHEID_DB_PER_BRANCH=1
-
-## go
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-
-## receiver
-testonly () {
-  local TEST=$1
-  make
-  if [ "$?" = "0" ]; then
-    PATH_REGEX="*test/$TEST*.erl"
-    APP_DIR=$(find apps -path "$PATH_REGEX" | sed -E 's:(apps/[^/]+).*:\1:')
-    cd $APP_DIR
-    rebar eunit suites=$TEST
-    cd -
-  fi
-}
-
 # autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 export PATH="/usr/local/sbin:$PATH"
@@ -112,5 +90,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 # De esta forma la conexion de tu browser sale por la facu y ves las paginas de los papers con el acceso de Ministerio como si estuvieses en la facu.
 
-export LC_ALL=en_US.UTF-8
+# Some Python packages need these
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8 
+
+source ~/dotfiles/ask.sh

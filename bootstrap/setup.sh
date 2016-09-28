@@ -1,6 +1,7 @@
 cd $HOME
 
 # set hostname
+
 ## ONLY FOR OSX
 sudo scutil --set HostName atlantis
 
@@ -10,8 +11,11 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 ## elasticsearch
 ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
 sudo launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+# remove unused
+launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plis
+killall CalendarAgent
 
-# zsh
+## zsh
 # look for `which zsh` on the /etc/shells because if it isn't there it will fail
 chsh -s $(which zsh)
 zsh
@@ -39,26 +43,3 @@ ln -s dotfiles/vim/ftplugin .vim/ftplugin
 # git
 ln -s dotfiles/git/gitconfig .gitconfig
 ln -s dotfiles/git/gitignore_global .gitignore_global
-
-###########
-## Manas ##
-###########
-
-## cepheid-web
-cd $PROJECT
-rbenv install
-rbenv rehash
-gem install bundler
-rbenv rehash
-bundle config build.mysql2 --with-mysql-config=/usr/local/Cellar/mysql/5.7.11/bin/mysql_config
-bundle install --path=.bundle
-bundle exec rake db:setup
-
-# to load it at login
-ln -sfv /usr/local/opt/rabbitmq344/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.rabbitmq344.plist
-
-# remove unused
-
-launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plis
-killall CalendarAgent
