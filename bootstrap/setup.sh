@@ -33,6 +33,9 @@ cd -
 rm -r .vim/ftplugin
 ln -s dotfiles/vim/ftplugin .vim/ftplugin
 
+# TODO setup emacs
+# ln -s dotfiles/emacs/spacemacs .spacemacs
+
 # git
 ln -s dotfiles/git/gitconfig .gitconfig
 ln -s dotfiles/git/gitignore_global .gitignore_global
