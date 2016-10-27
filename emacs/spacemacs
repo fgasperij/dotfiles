@@ -112,19 +112,16 @@ values."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
                          spacemacs-light
-                         solarized-light
                          solarized-dark
+                         solarized-light
                          sanityinc-solarized-dark
-                         sanityinc-solarized-light
-                         leuven
-                         monokai
-                         zenburn)
+                         sanityinc-solarized-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Monaco"
-                               :size 11
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.15)
@@ -281,11 +278,13 @@ you should place your code here."
           :url "http://www.thesaurus.com/browse/%s")
         search-engine-alist)
 
-  ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
+  (setq-default dotspacemacs-line-numbers t)
 
   ;; Clojure
   (setq clojure-enable-fancify-symbols t)
+  ;; Javascript
+  (setq js2-strict-missing-semi-warning nil) ; don't warn on missing semicolons
 
   (setq-default dospacemacs-default-theme 'solarized-dark)
   )

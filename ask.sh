@@ -13,7 +13,7 @@ function inside_ask_repo() {
 
 function asktest() {
   if $(inside_ask_repo); then
-    docker-compose run --rm app mix test "${1}"
+    docker-compose run --rm app mix test ${1}
   else
     echo "This is not the instedd/ask repo, go bother somewhere else."
   fi
@@ -29,7 +29,7 @@ function askiex() {
 
 function askrun() {
   if $(inside_ask_repo); then
-    docker-compose run --rm app "$@"
+    docker-compose run --rm app $@
   else
     echo "This is not the instedd/ask repo, go bother somewhere else."
   fi
