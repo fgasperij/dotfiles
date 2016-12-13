@@ -53,7 +53,7 @@ function networkpass() {
   security find-generic-password -D "AirPort network password" -a $1 -gw
 }
 function brium() { 
-  curl -d"$@" 'https://brium.me/api/messages?access_token=4a34f4f4518c36ef18111769b96753cdff796ee186d932c0fa6c7702f7eeb55b';
+  curl -d"$@" 'https://brium.me/api/messages?access_token=aad1588f2274693470d8e4836d897319a14e9b509ea6581b370af6ad93e77afb';
 }
 function chrome () {
   open -a /Applications/Google\ Chrome.app "$@"
