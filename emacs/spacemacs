@@ -19,6 +19,8 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     csv
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -31,6 +33,7 @@ values."
      auto-completion
      better-defaults
 
+     latex
      markdown
      org
 
@@ -50,6 +53,7 @@ values."
      python
      elixir
      react
+     java
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -110,10 +114,10 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light
+   dotspacemacs-themes '(solarized-light
                          solarized-dark
-                         solarized-light
+                         spacemacs-light
+                         spacemacs-dark
                          sanityinc-solarized-dark
                          sanityinc-solarized-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
@@ -278,15 +282,46 @@ you should place your code here."
           :url "http://www.thesaurus.com/browse/%s")
         search-engine-alist)
 
+  (setq-default
+   ;; Use spaces instead of tabs
+   indent-tabs-mode nil
+   ;; Tab size of 2
+   ;; Don't prompt for following symbolic links
+   vc-follow-symlinks t
+  )
+  ;; Evil
   (setq-default evil-escape-key-sequence "jk")
-  (setq-default dotspacemacs-line-numbers t)
+  ;; Move to beginning and end of line
+  (define-key evil-normal-state-map (kbd "H") 'evil-first-non-blank)
+  (define-key evil-normal-state-map (kbd "L") 'evil-last-non-blank)
+
+  (global-centered-cursor-mode)
+
+  (setq org-clock-persist 'history)
+  (org-clock-persistence-insinuate)
+
+  (add-hook 'text-mode-hook (lambda ()
+                              (setq fill-column 100)
+                              (turn-on-auto-fill)))
+
+  (add-hook 'prog-mode-hook (lambda ()
+                              (turn-on-auto-fill)
+                              (linum-mode)))
+
+  (setq-default
+   ;; js2-mode
+   js2-basic-offset 2
+   ;; web-mode
+   css-indent-offset 2
+   web-mode-markup-indent-offset 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-attr-indent-offset 2)
 
   ;; Clojure
   (setq clojure-enable-fancify-symbols t)
   ;; Javascript
   (setq js2-strict-missing-semi-warning nil) ; don't warn on missing semicolons
-
-  (setq-default dospacemacs-default-theme 'solarized-dark)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
