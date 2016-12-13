@@ -34,3 +34,30 @@ function askrun() {
     echo "This is not the instedd/ask repo, go bother somewhere else."
   fi
 }
+
+function askutils_help() {
+cat "
+  1. Run client tests.
+  2. Update NPM dependencies.
+  3. Exit.
+"
+}
+
+# function askutils() {
+#   askutils_help()
+#   read option
+#   while (true):
+#     case option:
+#       1 ->
+#         docker-compose run --rm brunch npm test
+#         exit
+#       2 ->
+#         docker-compose run --rm brunch npm install
+#         exit
+#       3 ->
+#         exit
+#       default ->
+#         askutils_help()
+#     end
+#   end
+# }
