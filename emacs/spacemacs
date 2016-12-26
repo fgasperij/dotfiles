@@ -29,6 +29,7 @@ values."
      search-engine
      git
      version-control
+     docker
 
      auto-completion
      better-defaults
@@ -54,6 +55,7 @@ values."
      elixir
      react
      java
+     flow-type
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

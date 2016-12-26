@@ -1,5 +1,5 @@
 function inside_ask_repo() {
-  git status > /dev/null 2>&1 
+  git status > /dev/null 2>&1
   if [ $? -ne 0 ]; then
     exit 1
   fi
@@ -33,6 +33,14 @@ function askrun() {
   else
     echo "This is not the instedd/ask repo, go bother somewhere else."
   fi
+}
+
+function askappdebug() {
+  docker-compose run --service-ports --rm app iex -S mix phoenix.server
+}
+
+function askuprest() {
+  docker-compose up db brunch
 }
 
 function askutils_help() {
