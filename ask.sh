@@ -4,7 +4,7 @@ function inside_ask_repo() {
     exit 1
   fi
 
-  if [  2 = $(git remote -v | grep "instedd/ask" | wc -l) ]; then
+  if [  $(git remote -v | grep "instedd/ask" | wc -l) ]; then
     exit 0
   fi
 

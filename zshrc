@@ -1,6 +1,7 @@
 # brew comes first
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+export PATH=/usr/local/mysql/bin:$PATH
 # tldr
 export PATH=~/bin:$PATH
 # rbenv
