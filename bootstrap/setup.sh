@@ -1,3 +1,5 @@
+# Preconditions
+# 1. Install homebrew
 cd $HOME
 
 # set hostname
@@ -5,22 +7,16 @@ cd $HOME
 ## ONLY FOR OSX
 sudo scutil --set HostName atlantis
 
-## mysql
-ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-## elasticsearch
-ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
-sudo launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
-# remove unused
-launchctl unload -w /System/Library/LaunchAgents/com.apple.CalendarAgent.plis
-killall CalendarAgent
-
 ## zsh
 # look for `which zsh` on the /etc/shells because if it isn't there it will fail
 chsh -s $(which zsh)
 zsh
 ln -s dotfiles/zshrc .zshrc
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo 'source $HOME/.zshrc.pre-oh-my-zsh' >> $HOME/.zshrc
 source ~/.zshrc
+
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # tmux
