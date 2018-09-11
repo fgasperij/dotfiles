@@ -4,6 +4,9 @@ export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbi
 export PATH=/usr/local/mysql/bin:$PATH
 # tldr
 export PATH=~/bin:$PATH
+# Adds Visual Studio Code to the path to have the `code` command available
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

@@ -10,5 +10,7 @@
         "**/node_modules": true,
         "**/priv/static": true
     },
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.rulers": [80],
+    "terminal.integrated.shell.osx": "/bin/zsh"
 }
