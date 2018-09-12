@@ -6,3 +6,5 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write com.apple.dock expose-animation-duration -int 0
 # Three finger drag
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerSwipeGesture -int 1
+# Screenshots folder
+defaults write com.apple.screencapture location ~/screenshots/
