@@ -3,7 +3,7 @@ apps=(
    flux 
    spotify
    chrome
-    visual-studio-code
+   visual-studio-code
 )
 
 for app in $apps; do
