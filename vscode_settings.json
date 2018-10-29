@@ -12,5 +12,12 @@
     },
     "vim.disableAnnoyingNeovimMessage": true,
     "editor.rulers": [80],
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.leader": "<space>"
 }
