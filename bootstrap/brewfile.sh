@@ -4,6 +4,7 @@ apps=(
    spotify
    chrome
    visual-studio-code
+   telegram
 )
 
 for app in $apps; do
