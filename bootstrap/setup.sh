@@ -1,7 +1,7 @@
 # Preconditions
 cd $HOME
 
-# 1. Install homebrew
+# Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # set hostname
@@ -44,7 +44,7 @@ ln -s dotfiles/git/gitconfig .gitconfig
 ln -s dotfiles/git/gitignore_global .gitignore_global
 
 cd $HOME
-./dotfiles/brewfile.sh
+./dotfiles/bootstrap/brewfile.sh
 
 # tldr
 npm install -g tldr
