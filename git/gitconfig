@@ -5,7 +5,7 @@
 	email = fgasperijabalera@gmail.com
 [core]
 	excludesfile = /Users/fgasperi/.gitignore_global
-	editor = /usr/local/bin/vim
+	editor = /usr/bin/vim
 	pager = less -r
 	commentchar = %
 [alias]
