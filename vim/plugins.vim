@@ -6,9 +6,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " General utility and navigation
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'bling/vim-airline'
 Plugin 'padde/jump.vim'
 

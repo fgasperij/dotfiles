@@ -97,5 +97,3 @@ export PATH="/usr/local/sbin:$PATH"
 # Some Python packages need these
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8 
-
-source ~/dotfiles/ask.sh

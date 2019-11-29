@@ -7,7 +7,12 @@ exec 'source '.plugins_file
 " Plugins
 
 " ag binding to ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" obatined from https://github.com/rking/ag.vim/issues/124#issuecomment-227038003
+let g:ackprg = 'ag --vimgrep --smartcase'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
 
 " airline
 set laststatus=2
