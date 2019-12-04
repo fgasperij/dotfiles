@@ -22,6 +22,10 @@ let g:airline_section_b = '%{fnamemodify(getcwd(), ":t")} > %{airline#util#wrap(
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 let g:ctrlp_working_path_mode=0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
 
 " base16 
 " colors configuration options are order specific
