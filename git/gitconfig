@@ -1,10 +1,10 @@
 [push]
 	default = simple
 [user]
-	name = Fernando Gasperi
+	name = Fernando Gasperi Jabalera
 	email = fgasperijabalera@gmail.com
 [core]
-	excludesfile = /Users/fgasperi/.gitignore_global
+	excludesfile = /home/ferch/.gitignore_global
 	editor = /usr/bin/vim
 	pager = less -r
 	commentchar = %

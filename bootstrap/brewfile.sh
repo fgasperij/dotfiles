@@ -18,7 +18,6 @@ brew_apps=(
     the_silver_searcher
     autojump
     tmux
-    reattach-to-user-namespace
     nodejs
 )
 

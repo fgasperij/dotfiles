@@ -19,12 +19,8 @@ Plugin 'terryma/vim-expand-region'
 " Language support
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'burnettk/vim-angular'
 Plugin 'scrooloose/syntastic'
-Plugin 'dag/vim2hs'
-Plugin 'sukima/xmledit'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'

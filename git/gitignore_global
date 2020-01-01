@@ -1,11 +1,9 @@
 *~
 # vim
 *.swp
-.DS_Store
 .agignore
-
-recentf
-
-fer_toolkit/
-
 .projectile
+
+# darwin
+.DS_Store
+recentf
