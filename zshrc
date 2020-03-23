@@ -44,4 +44,8 @@ function gi() {
 }
 
 # autojump
-source /etc/profile.d/autojump.zsh
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  source /etc/profile.d/autojump.zsh
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && $(brew --prefix)/etc/profile.d/autojump.sh
+fi
