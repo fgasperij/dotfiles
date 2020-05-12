@@ -5,6 +5,8 @@
 
 ;; evil
 (unless (package-installed-p 'evil) (package-install 'evil))
+;; This makes the TAB work as TAB when emacs is spawn in a console
+(setq evil-want-C-i-jump nil)
 (require 'evil)
 (evil-mode 1)
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
@@ -33,6 +35,7 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
+
 (unless (package-installed-p 'json-mode) (package-install 'json-mode))
 (unless (package-installed-p 'key-chord) (package-install 'key-chord))
 (key-chord-mode 1)
@@ -41,15 +44,21 @@
 ;; so Alt + q fits text into 80 columns
 (setq-default fill-column 80)
 
+;; Remove toolbar
+(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;; Remove menu bar
+(menu-bar-mode -1)
+
+;; Mode line settings
+(line-number-mode t)
+(column-number-mode t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files
-   (quote
-    ("/home/ferch/repos/notes/scratchpad.org" "/home/ferch/repos/notes/arch.org")))
- '(package-selected-packages (quote (key-chord json-mode evil))))
+)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
