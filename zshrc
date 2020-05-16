@@ -1,19 +1,19 @@
-# zsh
-# autoload -U compinit; compinit
-# zstyle ':completion:*' menu select # arrow navigation of completion options
-# setopt auto_cd # directory == cd directory
-# setopt auto_pushd # populate the dir stack
+# TEMPORARY: I still don't understand why is this necessary but without it
+# C-r for history search makes the shell fail to compute the width of the 
+# prompt correctly.
+export LC_ALL=en_US.UTF-8
 
 DOTFILES=~/repos/dotfiles
 
 # command line editing
 export EDITOR="vim"
-bindkey -v # vi emulation mode
-bindkey '^R' history-incremental-search-backward
-bindkey -M vicmd '^U' clear-screen
-bindkey -M viins '^U' clear-screen
-bindkey -M viins 'jk' vi-cmd-mode
+# bindkey -v # vi emulation mode
+# bindkey '^R' history-incremental-search-backward
+# bindkey -M vicmd '^U' clear-screen
+# bindkey -M viins '^U' clear-screen
+# bindkey -M viins 'jk' vi-cmd-mode
 
+# QUESTION: is this being used? why is it necessary?
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -27,7 +27,7 @@ alias tk='tmux kill-session -t'
 alias ccat='pygmentize -g'
 ## shortcut
 alias reload!='source ~/.zshrc'
-alias config='vim ~/.zshrc.pre-oh-my-zsh'
+alias config='$EDITOR ~/.zshrc.pre-oh-my-zsh'
 
 # shorcuts
 
