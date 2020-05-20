@@ -1,7 +1,15 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 (package-refresh-contents)
+
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+  )
 
 ;; ;; evil
 ;; (unless (package-installed-p 'evil) (package-install 'evil))
@@ -44,7 +52,9 @@
 (setq org-goto-auto-isearch nil)
 ;; Prettier HTML export
 (unless (package-installed-p 'ox-twbs) (package-install 'ox-twbs))
-(use-package ox-twbs :ensure t)
+;; Add org-ref
+(unless (package-installed-p 'org-ref) (package-install 'org-ref))
+(setq org-ref-default-bibliography '("~/Projects/Thesis/report/Informe/tesis.bib")) ;; While working in the thesis
 
 (unless (package-installed-p 'json-mode) (package-install 'json-mode))
 ;; (unless (package-installed-p 'key-chord) (package-install 'key-chord))
@@ -70,7 +80,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (ox-twbs magit projectile key-chord json-mode evil))))
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
