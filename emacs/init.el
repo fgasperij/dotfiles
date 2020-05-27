@@ -55,6 +55,14 @@
 (setq org-goto-auto-isearch nil)
 ;; Prettier HTML export
 (unless (package-installed-p 'ox-twbs) (package-install 'ox-twbs))
+;; Export to ./org_export_results
+(defun fff/org-export-output-file-name (orig-fun extension &optional subtreep pub-dir)
+  (unless pub-dir
+    (setq pub-dir "./org_export_results")
+    (unless (file-directory-p pub-dir)
+      (make-directory pub-dir)))
+  (apply orig-fun extension subtreep pub-dir nil))
+(advice-add 'org-export-output-file-name :around #'fff/org-export-output-file-name)
 ;; Add org-ref
 (unless (package-installed-p 'org-ref) (package-install 'org-ref))
 (setq org-ref-default-bibliography '("~/Projects/Thesis/report/Informe/tesis.bib")) ;; While working in the thesis
