@@ -6,7 +6,7 @@ cd $HOME
 
 # set hostname
 ## ONLY FOR OSX
-sudo scutil --set HostName atlantis
+sudo scutil --set HostName apel
 
 ## zsh
 # look for `which zsh` on the /etc/shells because if it isn't there it will fail
@@ -36,29 +36,14 @@ ln -s dotfiles/vim/ftplugin .vim/ftplugin
 # base-16 still isn't installed, disregard the message that says that it's not found
 vim +PluginInstall +qall
 
-# TODO setup emacs
-# ln -s dotfiles/emacs/spacemacs .spacemacs
+# setup emacs
+ln -s dotfiles/emacs/init.el ~/.emacs.d/init.el
 
 # git
 ln -s dotfiles/git/gitconfig .gitconfig
 ln -s dotfiles/git/gitignore_global .gitignore_global
 
 cd $HOME
-./dotfiles/bootstrap/brewfile.sh
-
-# tldr
-npm install -g tldr
-# Install VS Code extensions
-extensions=(
-    fallenwood.vimL
-    vscodevim.vim
-    rebornix.ruby
-    sleistner.vscode-fileutils
-)
-
-for extension in $extensions; do
-    code --install-extension $extension
-done
 
 # OS specific
 ./osx/set_defaults.sh
