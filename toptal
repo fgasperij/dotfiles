@@ -1,4 +1,0 @@
-export LISTEN_ON=0.0.0.0
-export PLATFORM__CHRONICLES__FAIL_IF_ENTRY_SEARCH_IS_UNAVAILABLE="false"
-source $HOME/.rvm/scripts/rvm
-export BUNDLE_GITHUB__COM=fgasperij:e4cd1e95ea25ce6c3fffea7f3be41acac8dae85f
