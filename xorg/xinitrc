@@ -1,1 +1,3 @@
 exec dwm
+
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
