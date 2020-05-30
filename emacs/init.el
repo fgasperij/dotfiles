@@ -9,7 +9,7 @@
   delete-old-versions t  ; Automatically delete excess backups
   kept-new-versions 20   ; how many of the newest versions to keep
   kept-old-versions 5    ; and how many of the old
-  )
+)
 
 ;; ;; evil
 ;; (unless (package-installed-p 'evil) (package-install 'evil))
@@ -29,7 +29,6 @@
 ;; projectile
 (unless (package-installed-p 'projectile) (package-install 'projectile))
 (projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; org
@@ -42,6 +41,7 @@
 ;; So clockdowns are remembered through open and closing emacs
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
+
 ;; Add plantuml to babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -51,8 +51,10 @@
 (defun fff/org-confirm-babel-evaluate (lang body)
   (not (string= lang "plantuml")))
 (setq org-confirm-babel-evaluate 'fff/org-confirm-babel-evaluate)
+
 ;; Quick movements through an org tree
 (setq org-goto-auto-isearch nil)
+
 ;; Prettier HTML export
 (unless (package-installed-p 'ox-twbs) (package-install 'ox-twbs))
 ;; Export to ./org_export_results
