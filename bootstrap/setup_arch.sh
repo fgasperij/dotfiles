@@ -1,15 +1,19 @@
 cd $HOME
 DOTFILES=~/repos/dotfiles
 
-# zsh
+# Install zsh
 sudo pacman -S zsh
 chsh -s $(which zsh)
 
-# Oh My Zsh + profile
+# zsh
 ln -s $DOTFILES/zshrc .zshrc
+ln -s $DOTFILES/zprofile .zprofile
+# Oh My Zsh
 h -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo 'source $HOME/.zshrc.pre-oh-my-zsh' >> $HOME/.zshrc
 source ~/.zshrc
+
+
 
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
@@ -36,3 +40,7 @@ vim +PluginInstall +qall
 # git
 ln -s $DOTFILES/git/gitconfig .gitconfig
 ln -s $DOTFILES/git/gitignore_global .gitignore_global
+
+# xorg
+for xconfig_file in xinitrc xprofile Xmodmap; do
+    ln -s $DOTFILES/xorg/"${xconfig_file}" ."${xconfig_file}"
