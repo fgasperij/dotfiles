@@ -7,11 +7,19 @@ DOTFILES=~/repos/dotfiles
 
 # command line editing
 export EDITOR="vim"
-# bindkey -v # vi emulation mode
-# bindkey '^R' history-incremental-search-backward
-# bindkey -M vicmd '^U' clear-screen
-# bindkey -M viins '^U' clear-screen
-# bindkey -M viins 'jk' vi-cmd-mode
+bindkey -v # vi emulation mode
+bindkey '^R' history-incremental-search-backward
+bindkey -M vicmd '^U' clear-screen
+bindkey -M viins '^U' clear-screen
+bindkey -M viins 'jk' vi-cmd-mode
+
+# vim keybindings for info reading
+alias info='info --vi-keys'
+alias telegram='nohup ~/Downloads/Telegram/Telegram &'
+alias emacsclient='nohup emacsclient -c &'
+
+PATH="${PATH}:/home/ferch/Downloads/Telegram"
+
 
 # QUESTION: is this being used? why is it necessary?
 # Base16 Shell

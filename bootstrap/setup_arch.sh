@@ -44,3 +44,7 @@ ln -s $DOTFILES/git/gitignore_global .gitignore_global
 # xorg
 for xconfig_file in xinitrc xprofile Xmodmap; do
     ln -s $DOTFILES/xorg/"${xconfig_file}" ."${xconfig_file}"
+done
+
+# emacs
+systemctl --user enable emacs
