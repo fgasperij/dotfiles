@@ -1,3 +1,5 @@
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
+setxkbdmap us intl caps:ctrl_modifier
+
 exec dwm
