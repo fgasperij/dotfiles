@@ -9,7 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'padde/jump.vim'
 
 " Automagic
@@ -32,8 +33,9 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
 
 " colorschemes
-Plugin 'chriskempson/base16-vim'
-Plugin 'juanedi/predawn.vim'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'juanedi/predawn.vim'
 
 " git
 Plugin 'tpope/vim-fugitive'

@@ -4,6 +4,7 @@
 export LC_ALL=en_US.UTF-8
 
 DOTFILES=~/repos/dotfiles
+NOTES=~/repos/notes
 
 # command line editing
 export EDITOR="vim"
@@ -16,10 +17,24 @@ bindkey -M viins 'jk' vi-cmd-mode
 # vim keybindings for info reading
 alias info='info --vi-keys'
 alias telegram='nohup ~/Downloads/Telegram/Telegram &'
-alias emacsclient='nohup emacsclient -c &'
+alias smacs='nohup emacsclient -c &'
 
 function z {
   nohup zathura $1 &
+}
+
+function kittyt {
+  cd ~/.config/kitty
+
+  theme_name="Light";
+  if [ "$1" = "dark" ]; then
+    theme_name="Darcula";
+  fi
+
+  rm theme.conf
+  ln -s "./kitty-themes/themes/Solarized_${theme_name}.conf" theme.conf
+  
+  cd -
 }
 
 PATH="${PATH}:/home/ferch/Downloads/Telegram"
@@ -33,7 +48,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 # aliases
 ## tmux
 alias ta='tmux attach -t'
-alias ts='tmux new-session -s'
+alias tms='tmux new-session -s'
 alias tk='tmux kill-session -t'
 ## utilities
 alias ccat='pygmentize -g'

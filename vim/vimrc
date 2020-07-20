@@ -27,13 +27,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
-" base16 
-" colors configuration options are order specific
-"set t_Co=256
-"let base16colorspace=256
-"colorscheme base16-tomorrow
-"set background=dark
-
 " Visual options
 set ruler
 syntax on
@@ -41,6 +34,8 @@ set relativenumber
 set number
 "highlight ColorColumn ctermbg=235 guibg=#EBEBEB
 "let &colorcolumn=join(range(81,999),",")
+set background=dark
+colorscheme solarized
 
 " Searching
 set hlsearch
@@ -54,7 +49,6 @@ set tabstop=2
 set shiftwidth=2
 set smartindent
 set expandtab
-
 set autoread
 
 """"""""""
