@@ -1,13 +1,18 @@
+
+DOTFILES=~/repos/dotfiles
+NOTES=~/repos/notes
+DOOMDIR=~/.config/doom
+PATH="${PATH}:/home/ferch/Downloads/Telegram"
+PATH="${PATH}:/home/ferch/.emacs.d/bin"
 # TEMPORARY: I still don't understand why is this necessary but without it
 # C-r for history search makes the shell fail to compute the width of the 
 # prompt correctly.
 export LC_ALL=en_US.UTF-8
+export EDITOR="vim"
 
-DOTFILES=~/repos/dotfiles
-NOTES=~/repos/notes
+
 
 # command line editing
-export EDITOR="vim"
 bindkey -v # vi emulation mode
 bindkey '^R' history-incremental-search-backward
 bindkey -M vicmd '^U' clear-screen
@@ -16,11 +21,11 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # vim keybindings for info reading
 alias info='info --vi-keys'
-alias telegram='nohup ~/Downloads/Telegram/Telegram &'
-alias smacs='nohup emacsclient -c &'
+alias telegram='nohup ~/Downloads/Telegram/Telegram & > /dev/null'
+alias dmacs='nohup emacsclient -c & > /dev/null'
 
 function z {
-  nohup zathura $1 &
+  nohup zathura $1 & > /dev/null
 }
 
 function kittyt {
@@ -36,9 +41,6 @@ function kittyt {
   
   cd -
 }
-
-PATH="${PATH}:/home/ferch/Downloads/Telegram"
-
 
 # QUESTION: is this being used? why is it necessary?
 # Base16 Shell
