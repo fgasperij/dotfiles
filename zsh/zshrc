@@ -1,16 +1,4 @@
-
-DOTFILES=~/repos/dotfiles
-NOTES=~/repos/notes
-DOOMDIR=~/.config/doom
-PATH="${PATH}:/home/ferch/Downloads/Telegram"
-PATH="${PATH}:/home/ferch/.emacs.d/bin"
-# TEMPORARY: I still don't understand why is this necessary but without it
-# C-r for history search makes the shell fail to compute the width of the 
-# prompt correctly.
-export LC_ALL=en_US.UTF-8
-export EDITOR="vim"
-
-
+DOTFILES="/Users/fgasperi/Code/dotfiles"
 
 # command line editing
 bindkey -v # vi emulation mode
@@ -21,26 +9,6 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # vim keybindings for info reading
 alias info='info --vi-keys'
-alias telegram='nohup ~/Downloads/Telegram/Telegram & > /dev/null'
-alias dmacs='nohup emacsclient -c & > /dev/null'
-
-function z {
-  nohup zathura $1 & > /dev/null
-}
-
-function kittyt {
-  cd ~/.config/kitty
-
-  theme_name="Light";
-  if [ "$1" = "dark" ]; then
-    theme_name="Darcula";
-  fi
-
-  rm theme.conf
-  ln -s "./kitty-themes/themes/Solarized_${theme_name}.conf" theme.conf
-  
-  cd -
-}
 
 # QUESTION: is this being used? why is it necessary?
 # Base16 Shell
@@ -48,10 +16,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # aliases
-## tmux
-alias ta='tmux attach -t'
-alias tms='tmux new-session -s'
-alias tk='tmux kill-session -t'
 ## utilities
 alias ccat='pygmentize -g'
 ## shortcut
@@ -60,11 +24,6 @@ alias config='$EDITOR ~/.zshrc.pre-oh-my-zsh'
 
 # shorcuts
 
-function tst() {
-  selected_setup=$1
-  shift 1
-  ~/dotfiles/tmux/tmux_setups/${selected_setup}.sh $@
-}
 function cherry-picky() {
   git log -1 -p $1 $2 | patch -p1
 }
@@ -83,4 +42,4 @@ function scast {
   ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac $1
 }
 
-source $DOTFILES/zsh/sigmind.sh
+source $DOTFILES/zsh/facebook.sh

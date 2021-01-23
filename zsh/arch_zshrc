@@ -1,0 +1,26 @@
+export EDITOR="vim"
+# TEMPORARY: I still don't understand why is this necessary but without it
+# C-r for history search makes the shell fail to compute the width of the
+# prompt correctly.
+export LC_ALL=en_US.UTF-8
+
+alias telegram='nohup ~/Downloads/Telegram/Telegram & > /dev/null'
+alias dmacs='nohup emacsclient -c & > /dev/null'
+
+function z {
+  nohup zathura $1 & > /dev/null
+}
+
+function kittyt {
+  cd ~/.config/kitty
+
+  theme_name="Light";
+  if [ "$1" = "dark" ]; then
+    theme_name="Darcula";
+  fi
+
+  rm theme.conf
+  ln -s "./kitty-themes/themes/Solarized_${theme_name}.conf" theme.conf
+
+  cd -
+}
