@@ -9,6 +9,3 @@ export npm_config_prefix=~/.node_modules/bin
 
 # AWS
 alias aws_sigmind_test='ssh -i "~/.ssh/ar-lab-test-apirest.pem" ubuntu@ec2-54-166-192-65.compute-1.amazonaws.com'
-
-
-

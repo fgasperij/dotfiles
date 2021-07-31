@@ -1,26 +1,13 @@
 # Preconditions
 cd $HOME
-# Path to the dotfiles repo, example: /User/fgasperi/repos/dotfiles
-DOTFILES=$1
 
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# set hostname
-## ONLY FOR OSX
-sudo scutil --set HostName apel
+brew install autojump
 
 ## zsh
 # look for `which zsh` on the /etc/shells because if it isn't there it will fail
 chsh -s $(which zsh)
-zsh
-ln -s $DOTFILES/zshrc .zshrc
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo 'source $HOME/.zshrc.pre-oh-my-zsh' >> $HOME/.zshrc
-source ~/.zshrc
-
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
 # tmux
 ln -s dotfiles/tmux/tmux.conf .tmux.conf

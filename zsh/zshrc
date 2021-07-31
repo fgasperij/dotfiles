@@ -1,3 +1,5 @@
+export EDITOR="vim"
+
 # Command line editing
 bindkey -v # vi emulation mode
 bindkey '^R' history-incremental-search-backward
@@ -5,32 +7,14 @@ bindkey -M vicmd '^U' clear-screen
 bindkey -M viins '^U' clear-screen
 bindkey -M viins 'jk' vi-cmd-mode
 
-# vim keybindings for info reading
-alias info='info --vi-keys'
-
 # aliases
 ## shortcut
 alias reload!='source ~/.zshrc'
 alias config='vim ~/.zshrc'
+alias l='ls -lah'
 
-# shorcuts
-
-function cherry-picky() {
-  git log -1 -p $1 $2 | patch -p1
-}
+# Pull a default git ignore file for a programming language
 function gi() {
-  curl -L -s https://www.gitignore.io/api/"$@" ;
+  language=$1
+  curl -L -s https://www.gitignore.io/api/"$language" ;
 }
-
-# autojump
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  source /etc/profile.d/autojump.zsh
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && $(brew --prefix)/etc/profile.d/autojump.sh
-fi
-
-function scast {
-  ffmpeg -f x11grab -video_size 1920x1080 -framerate 25 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac $1
-}
-
-source $DOTFILES/zsh/facebook.sh
