@@ -1,8 +1,13 @@
 # Dotfiles
 
-## Setting up a new macOS machine
+## Setting up a new machine
 
 - Add an SSH key to the machine.
-- Add the SSH key to github.
-- Clone the repo
-- Run ./setup.sh
+
+```
+ssh-keygen -t ed25519 -C "a comment" -f ~/.ssh/keyfile -N passphrase
+# Only for macOS, -K adds the passphrase to the keychain
+ssh-add -K ~/.ssh/keyfile
+# Rest
+ssh-add ~/.ssh/keyfile
+```
