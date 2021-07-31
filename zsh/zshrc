@@ -1,6 +1,4 @@
-DOTFILES="/Users/fgasperi/Code/dotfiles"
-
-# command line editing
+# Command line editing
 bindkey -v # vi emulation mode
 bindkey '^R' history-incremental-search-backward
 bindkey -M vicmd '^U' clear-screen
@@ -10,17 +8,10 @@ bindkey -M viins 'jk' vi-cmd-mode
 # vim keybindings for info reading
 alias info='info --vi-keys'
 
-# QUESTION: is this being used? why is it necessary?
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # aliases
-## utilities
-alias ccat='pygmentize -g'
 ## shortcut
 alias reload!='source ~/.zshrc'
-alias config='vim ~/.zshrc.pre-oh-my-zsh'
+alias config='vim ~/.zshrc'
 
 # shorcuts
 
