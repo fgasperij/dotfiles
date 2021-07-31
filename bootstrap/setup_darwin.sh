@@ -38,9 +38,6 @@ ln -s dotfiles/vim/ftplugin .vim/ftplugin
 # base-16 still isn't installed, disregard the message that says that it's not found
 vim +PluginInstall +qall
 
-# setup emacs
-ln -s $DOTFILES/emacs/init.el ~/.emacs.d/init.el
-
 # git
 ln -s $DOTFILES/git/gitconfig .gitconfig
 ln -s $DOTFILES/git/gitignore_global .gitignore_global
