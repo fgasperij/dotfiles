@@ -1,85 +1,18 @@
 {
     "editor.suggestSelection": "first",
-    "intern-tools.showReminderBeforeMeetings": true,
-    "fb.ms-remote-connections.hosts": [],
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
             "after": ["<Esc>"]
         }
     ],
-    "interactive-smartlog.pull": "arc pull",
-    "interactive-smartlog.fetch": "jf get and checkout",
     "vim.useSystemClipboard": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
-    },
-    "interactive-smartlog.right-drawer-width": 1006,
-    "interactive-smartlog.bottom-drawer-height": 500,
-    "diffEditor.wordWrap": "on",
     "editor.wordWrap": "on",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "workbench.startupEditor": "none",
-    "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
-    "fb.ms-remote-connections.odtypes": [
-        {
-            "type": "ondemand_configerator",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_www",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_fbcode",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_opsfiles",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_ios",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_instagram",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_mobile",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_fbsource",
-            "flavor": "default",
-            "folders": []
-        },
-        {
-            "type": "ondemand_fbsource",
-            "flavor": "android",
-            "folders": []
-        }
-    ],
-    "interactive-smartlog.autoRunMergeDrivers": true,
-    "workbench.editor.untitled.hint": "hidden",
     "terminal.external.osxExec": "iTerm.app",
-    "fb.ms-remote-connections.starred": [],
-    "fb.doctor.kerberos-keychain": true,
     "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.persistentSessionScrollback": 10000,
-    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 10,
-    "fb.openInteractiveSmartlogAfterMountingOnDemand": false,
-    "[json]": {
-        "editor.defaultFormatter": "nuclide.prettier"
-    },
     "window.zoomLevel": 1,
     "editor.tabSize": 2
 }
